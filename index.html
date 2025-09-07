@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adonis Younes — Interactive Personal Profile</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Primary">
+        <div class="brand">Adonis Younes</div>
+        <div class="navlinks" role="navigation">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <button id="themeToggle" class="btn" aria-pressed="false">🌙 Dark Mode</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- ABOUT -->
+    <section id="about" class="card">
+      <div class="hero">
+        <div>
+          <h1 class="title">Adonis Younes — CS Student & Security Enthusiast</h1>
+          <p class="subtitle">I’m a Computer Science student at the College of Staten Island (expected 2026), passionate about cybersecurity, system administration, and building solutions that connect my academic work with real-world projects.</p>
+          <p>
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn" href="https://github.com/AdonisYounes" target="_blank">GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/adonis-younes-8475712a8/" target="_blank">LinkedIn</a>
+          </p>
+        </div>
+        <figure class="avatar">
+          <img src="me.jpg" alt="Photo of Adonis Younes" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="grid skills">
+      <h2 style="grid-column: 1/-1;">Skills</h2>
+      <article class="skill">
+        <h3>Programming</h3>
+        <p class="muted">C++, HTML, CSS, Python, JavaScript, PowerShell</p>
+        <div class="bar"><span data-value="90"></span></div>
+      </article>
+      <article class="skill">
+        <h3>Technologies</h3>
+        <p class="muted">Wireshark, Azure, MySQL, Heroku, Linux, AWS, JupyterLabs, Active Directory</p>
+        <div class="bar"><span data-value="80"></span></div>
+      </article>
+      <article class="skill">
+        <h3>Certifications</h3>
+        <p class="muted">Cisco Cybersecurity Technician, CompTIA Security+ (in progress)</p>
+        <div class="bar"><span data-value="70"></span></div>
+      </article>
+      <article class="skill">
+        <h3>Languages</h3>
+        <p class="muted">English & Arabic (Fluent), French (Intermediate)</p>
+        <div class="bar"><span data-value="85"></span></div>
+      </article>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="card">
+      <h2>Projects</h2>
+      <div class="grid project-grid" id="projectGrid">
+        <article class="project" data-tags="security linux">
+          <h3>Personal Home Lab</h3>
+          <p>Linux sandbox built on an old laptop to practice system administration, networking, and open-source security tools.</p>
+        </article>
+        <article class="project" data-tags="sql">
+          <h3>Music Recommendation System</h3>
+          <p>SQL-based recommendation engine leveraging optimized queries and backend logic for efficient data-driven results.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="card">
+      <h2>Experience & Education</h2>
+      <ul>
+        <li><strong>In-Person Help Desk — College of Staten Island (Jan 2024 – May 2025)</strong><br>
+          Provided IT support to students via email, phone, and in person. Resolved 95% of printer issues on first contact.</li>
+        <li><strong>Cybersecurity & IT Intern — MSI Net Inc. (Jun 2024 – Aug 2024)</strong><br>
+          Configured 100+ student laptops and Bloomberg terminals with monitoring software. Deployed and secured workstations. Hands-on experience with PowerShell and Microsoft Azure.</li>
+        <li><strong>Garden Associate — Home Depot (Apr 2025 – Aug 2025)</strong><br>
+          Supported customers with plant care and tools. Maintained inventory and garden center operations.</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:adoniss.younes@gmail.com">adoniss.younes@gmail.com</a></p>
+      <p>Phone: <a href="tel:+14845063721">(484) 506-3721</a></p>
+      <p>Location: Brooklyn, NY</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/adonis-younes-8475712a8/" target="_blank">linkedin.com/in/adonis-younes-8475712a8</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Adonis Younes • 
+        <a href="https://github.com/AdonisYounes" target="_blank">GitHub</a> • 
+        <a href="https://www.linkedin.com/in/adonis-younes-8475712a8/" target="_blank">LinkedIn</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

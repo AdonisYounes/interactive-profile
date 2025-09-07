@@ -1,0 +1,217 @@
+/* ===== reset ===== */
+*, *::before, *::after { box-sizing: border-box; }
+html:focus-within { scroll-behavior: smooth; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; }
+img, picture { max-width: 100%; display: block; }
+input, button, textarea, select { font: inherit; }
+
+/* ===== theme tokens ===== */
+:root {
+  --bg: #0f172a;        /* slate-900 */
+  --card: #111827;      /* gray-900 */
+  --text: #e5e7eb;      /* gray-200 */
+  --muted: #94a3b8;     /* slate-400 */
+  --accent: #22d3ee;    /* cyan-400 */
+  --accent-2: #a78bfa;  /* violet-400 */
+  --ring: rgba(34, 211, 238, 0.35);
+}
+
+[data-theme="light"] {
+  --bg: #f8fafc;        /* slate-50 */
+  --card: #ffffff;
+  --text: #0f172a;      /* slate-900 */
+  --muted: #334155;     /* slate-700 */
+}
+
+body { background: linear-gradient(180deg, #0b1020, var(--bg)); color: var(--text); }
+.container { width: min(1100px, 92vw); margin-inline: auto; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.muted { color: var(--muted); }
+
+/* ===== layout ===== */
+header.site-header { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(8px); background: rgba(15,23,42,0.65); border-bottom: 1px solid rgba(255,255,255,0.06); }
+nav.navbar { display: grid; grid-template-columns: 1fr auto auto; gap: 1rem; align-items: center; padding: .75rem 0; }
+.brand { font-weight: 700; letter-spacing: .4px; }
+.navlinks { display: flex; gap: .9rem; flex-wrap: wrap; }
+.navlinks a { padding: .45rem .7rem; border-radius: .6rem; }
+.navlinks a:hover { background: rgba(255,255,255,0.06); }
+
+.btn { display: inline-flex; align-items: center; gap: .5rem; padding: .55rem .9rem; border-radius: .8rem; border: 1px solid rgba(255,255,255,0.12); background: #0b1327; color: var(--text); cursor: pointer; transition: transform .15s ease, background .2s; }
+.btn:hover { transform: translateY(-1px); background: #0e1831; }
+
+main { padding: 2rem 0 4rem; display: grid; gap: 3rem; }
+section { scroll-margin-top: 84px; }
+.card { background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)); border: 1px solid rgba(255,255,255,0.08); border-radius: 1.2rem; padding: 1.3rem; box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
+.grid { display: grid; gap: 1.2rem; }
+
+/* hero */
+.hero { display: grid; gap: 1.5rem; align-items: center; grid-template-columns: 1.2fr .8fr; }
+.title { font-size: clamp(1.6rem, 2.8vw + .5rem, 3rem); margin: 0; }
+.subtitle { color: var(--muted); margin: .3rem 0 1rem; }
+.avatar { border-radius: 1rem; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); }
+
+/* skills */
+.skills { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.skill { padding: 1rem; border-radius: 1rem; background: var(--card); border: 1px solid rgba(255,255,255,0.06); }
+.skill h3 { margin: 0 0 .4rem; font-size: 1rem; }
+.bar { height: 10px; background: rgba(255,255,255,0.12); border-radius: 999px; overflow: hidden; }
+.bar > span { display: block; height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), var(--accent-2)); border-radius: inherit; transition: width 1200ms cubic-bezier(.2,.7,.2,1); }
+
+/* projects */
+.project-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.project { background: var(--card); border-radius: 1rem; border: 1px solid rgba(255,255,255,0.06); padding: 1rem; }
+
+/* contact */
+form { display: grid; gap: .8rem; }
+input[type="text"], input[type="email"], textarea {
+  width: 100%; padding: .8rem; border-radius: .6rem;
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(255,255,255,0.04); color: var(--text);
+}
+input:focus, textarea:focus { outline: none; box-shadow: 0 0 0 4px var(--ring); }
+.error { color: #fecaca; font-size: .9rem; }
+
+/* footer */
+footer { padding: 2rem 0; color: var(--muted); text-align: center; }
+
+/* responsive */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+}
+
+/* ==== PROFESSIONAL LIGHT MODE FIXES ==== */
+
+/* 1) Solid, subtle background (no gradient or animation) */
+[data-theme="light"] body {
+  background: #f6f7fb !important; /* soft neutral */
+  color: #0f172a;
+  animation: none !important;
+  background-size: auto !important;
+}
+
+/* 2) Cards + surfaces: crisp but not stark */
+[data-theme="light"] .card,
+[data-theme="light"] .project,
+[data-theme="light"] .avatar {
+  background: #ffffff;
+  border: 1px solid #e6e8ee;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+/* 3) Header/nav: reduce glass, improve contrast */
+[data-theme="light"] header.site-header {
+  background: #ffffffd9;
+  border-bottom: 1px solid #e6e8ee;
+  backdrop-filter: blur(6px);
+}
+
+/* 4) Links + buttons: neutral default with clear hover */
+[data-theme="light"] a { color: #0f172a; text-decoration: underline; }
+[data-theme="light"] .btn {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #e6e8ee;
+  box-shadow: none;
+  transition: background .15s ease, border-color .15s ease;
+}
+[data-theme="light"] .btn:hover { background: #f1f3f7; border-color: #d9dce5; }
+
+/* 5) Typography: professional and responsive */
+.title { line-height: 1.2; }
+@media (min-width: 1024px) {
+  .title { font-size: clamp(2rem, 2.2vw + 1rem, 3rem); }
+}
+@media (max-width: 640px) {
+  .title { font-size: 1.8rem; }
+}
+
+/* Subtitle & muted text should remain legible in light mode */
+[data-theme="light"] .subtitle,
+[data-theme="light"] .muted { color: #475567; }
+
+/* 6) Skill bars: lighter tracks for light mode */
+[data-theme="light"] .bar { background: #e6e8ee; }
+
+/* 7) Spacing touch-up so sections breathe on light bg */
+main { gap: 2.5rem; }
+section.card { padding: 1.25rem; }
+
+/* 8) Ensure hero image frame is clean */
+[data-theme="light"] .avatar { box-shadow: none; }
+
+/* 9) Accessibility: strong focus ring on light bg */
+[data-theme="light"] input:focus,
+[data-theme="light"] textarea:focus,
+[data-theme="light"] .btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.25); /* blue ring */
+}
+
+
+
+navlinks a {
+  position: relative;
+  text-decoration: none;              /* remove underline */
+  color: var(--text);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: .6rem;
+  padding: .4rem .7rem;
+  transition: transform .15s ease, background-color .15s ease, color .15s ease, border-color .15s ease;
+}
+.navlinks a:hover,
+.navlinks a:focus-visible {
+  background: rgba(255,255,255,0.06);
+  color: #e2e8f0;
+  border-color: rgba(255,255,255,0.10);
+  transform: translateY(-1px) scale(1.04);
+  outline: none;
+}
+
+/* Light mode nav hover tweak */
+[data-theme="light"] .navlinks a:hover,
+[data-theme="light"] .navlinks a:focus-visible {
+  background: #f1f5f9;
+  color: #0f172a;
+  border-color: #e5e7eb;
+}
+
+/* =============== SKILL CARD HOVER =============== */
+.skill {
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.skill:hover,
+.skill:focus-within {
+  transform: translateY(-2px) scale(1.02);
+  border-color: rgba(34,211,238,0.35); /* accent ring */
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+/* Light mode skill card hover */
+[data-theme="light"] .skill:hover,
+[data-theme="light"] .skill:focus-within {
+  border-color: #cbd5e1;
+  box-shadow: 0 14px 30px rgba(2,6,23,0.08);
+}
+
+/* =============== CONTACT FORM — new grid layout =============== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;     /* two columns on desktop */
+  gap: 1rem 1.25rem;
+}
+
+/* Field group container */
+.field {
+  display: grid;
+  gap: .35rem;
+}
+.field label {
+  font-weight: 600;
+  color: var(--text);
+  opacity: .9;
+}
+
+/* Make message, status and button fu*
+
