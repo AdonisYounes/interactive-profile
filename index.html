@@ -32,60 +32,74 @@
           <p class="subtitle">I’m a Computer Science student at the College of Staten Island (expected 2026), passionate about cybersecurity, system administration, and building solutions that connect my academic work with real-world projects.</p>
           <p>
             <a class="btn" href="#projects">View Projects</a>
-            <a class="btn" href="https://github.com/AdonisYounes" target="_blank">GitHub</a>
-            <a class="btn" href="https://www.linkedin.com/in/adonis-younes-8475712a8/" target="_blank">LinkedIn</a>
+            <a class="btn" href="https://github.com/AdonisYounes" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/adonis-younes-8475712a8/" target="_blank" rel="noopener">LinkedIn</a>
           </p>
         </div>
-        <figure class="avatar">
+        <figure class="avatar pro-edges">
           <img src="me.jpg" alt="Photo of Adonis Younes" />
         </figure>
       </div>
     </section>
 
-    <!-- SKILLS -->
+    <!-- SKILLS (no loading bars) -->
     <section id="skills" class="grid skills">
       <h2 style="grid-column: 1/-1;">Skills</h2>
-      <article class="skill">
+
+      <article class="skill" tabindex="0">
         <h3>Programming</h3>
         <p class="muted">C++, HTML, CSS, Python, JavaScript, PowerShell</p>
-        <div class="bar"><span data-value="90"></span></div>
       </article>
-      <article class="skill">
+
+      <article class="skill" tabindex="0">
         <h3>Technologies</h3>
         <p class="muted">Wireshark, Azure, MySQL, Heroku, Linux, AWS, JupyterLabs, Active Directory</p>
-        <div class="bar"><span data-value="80"></span></div>
       </article>
-      <article class="skill">
+
+      <article class="skill" tabindex="0">
         <h3>Certifications</h3>
         <p class="muted">Cisco Cybersecurity Technician, CompTIA Security+ (in progress)</p>
-        <div class="bar"><span data-value="70"></span></div>
       </article>
-      <article class="skill">
+
+      <article class="skill" tabindex="0">
         <h3>Languages</h3>
         <p class="muted">English & Arabic (Fluent), French (Intermediate)</p>
-        <div class="bar"><span data-value="85"></span></div>
       </article>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="card">
-      <h2>Projects</h2>
-      <div class="grid project-grid" id="projectGrid">
-        <article class="project" data-tags="security linux">
-          <h3>Personal Home Lab</h3>
-          <p>Linux sandbox built on an old laptop to practice system administration, networking, and open-source security tools.</p>
-        </article>
-        <article class="project" data-tags="sql">
-          <h3>Music Recommendation System</h3>
-          <p>SQL-based recommendation engine leveraging optimized queries and backend logic for efficient data-driven results.</p>
-        </article>
-      </div>
-    </section>
+    <!-- PROJECTS (updated with new repos & image names) -->
+<section id="projects" class="card">
+  <h2>Projects</h2>
+  <div class="grid project-grid" id="projectGrid">
+    <article class="project hoverable" data-tags="security networking">
+      <figure class="project-media">
+        <img src="portscanner.png" alt="Screenshot of Port Scanner project" />
+      </figure>
+      <h3>Port-Scanner</h3>
+      <p>A fast TCP port scanner with configurable ranges and timeouts; prints detected services and basic banners.</p>
+      <p>
+        <a class="btn" href="https://github.com/AdonisYounes/port-scanner" target="_blank" rel="noopener">GitHub</a>
+      </p>
+    </article>
+
+    <article class="project hoverable" data-tags="javascript game">
+      <figure class="project-media">
+        <img src="blackjack.png" alt="Screenshot of Blackjack project" />
+      </figure>
+      <h3>Blackjack</h3>
+      <p>Browser-based Blackjack with clean UI, chip logic, and basic strategy prompts; built in HTML/CSS/JS.</p>
+      <p>
+        <a class="btn" href="https://github.com/AdonisYounes/Blackjack" target="_blank" rel="noopener">GitHub</a>
+      </p>
+    </article>
+  </div>
+</section>
+
 
     <!-- EXPERIENCE -->
     <section id="experience" class="card">
       <h2>Experience & Education</h2>
-      <ul>
+      <ul class="experience-list">
         <li><strong>In-Person Help Desk — College of Staten Island (Jan 2024 – May 2025)</strong><br>
           Provided IT support to students via email, phone, and in person. Resolved 95% of printer issues on first contact.</li>
         <li><strong>Cybersecurity & IT Intern — MSI Net Inc. (Jun 2024 – Aug 2024)</strong><br>
@@ -99,17 +113,16 @@
     <section id="contact" class="card">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:adoniss.younes@gmail.com">adoniss.younes@gmail.com</a></p>
-      <p>Phone: <a href="tel:+14845063721">(484) 506-3721</a></p>
       <p>Location: Brooklyn, NY</p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/adonis-younes-8475712a8/" target="_blank">linkedin.com/in/adonis-younes-8475712a8</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/adonis-younes-8475712a8/" target="_blank" rel="noopener">linkedin.com/in/adonis-younes-8475712a8</a></p>
     </section>
   </main>
 
   <footer>
     <div class="container">
       <p>© <span id="year"></span> Adonis Younes • 
-        <a href="https://github.com/AdonisYounes" target="_blank">GitHub</a> • 
-        <a href="https://www.linkedin.com/in/adonis-younes-8475712a8/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/AdonisYounes" target="_blank" rel="noopener">GitHub</a> • 
+        <a href="https://www.linkedin.com/in/adonis-younes-8475712a8/" target="_blank" rel="noopener">LinkedIn</a>
       </p>
     </div>
   </footer>
@@ -117,4 +130,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
