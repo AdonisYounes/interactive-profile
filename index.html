@@ -11,13 +11,33 @@
     <div class="container">
       <nav class="navbar" aria-label="Primary">
         <div class="brand">Adonis Younes</div>
+
         <div class="navlinks" role="navigation">
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
           <a href="#experience">Experience</a>
           <a href="#contact">Contact</a>
+
+          <!-- Dropdown aligned with nav -->
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">More ▾</a>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a href="AY_CV_2025%20(1).pdf" target="_blank" rel="noopener">
+                  Resume (PDF)
+                </a>
+              </li>
+              <li>
+                <a href="https://www.credly.com/badges/911c3310-c626-4d9b-a399-153370a4e146"
+                   target="_blank" rel="noopener">
+                  Certifications
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
+
         <button id="themeToggle" class="btn" aria-pressed="false">🌙 Dark Mode</button>
       </nav>
     </div>
@@ -29,7 +49,11 @@
       <div class="hero">
         <div>
           <h1 class="title">Adonis Younes — CS Student & Security Enthusiast</h1>
-          <p class="subtitle">I’m a Computer Science student at the College of Staten Island (expected 2026), passionate about cybersecurity, system administration, and building solutions that connect my academic work with real-world projects.</p>
+          <p class="subtitle">
+            I’m a Computer Science student at the College of Staten Island (expected 2026),
+            passionate about cybersecurity, system administration, and building solutions that
+            connect my academic work with real-world projects.
+          </p>
           <p>
             <a class="btn" href="#projects">View Projects</a>
             <a class="btn" href="https://github.com/AdonisYounes" target="_blank" rel="noopener">GitHub</a>
@@ -71,7 +95,7 @@
     <section id="projects" class="card">
       <h2>Projects</h2>
       <div class="grid project-grid" id="projectGrid">
-        <article class="project hoverable" data-tags="security networking">
+        <article class="project hoverable" data-tags="security networking" id="portscanner">
           <figure class="project-media">
             <img src="portscanner.png" alt="Screenshot of Port Scanner project" />
           </figure>
@@ -82,16 +106,18 @@
           </p>
         </article>
 
-        <!-- Replaced Blackjack project -->
-        <article class="project hoverable" data-tags="security soc">
+        <article class="project hoverable" data-tags="security soc" id="cloudless">
           <figure class="project-media">
             <img src="cloudless-soc.png" alt="Screenshot of Cloudless SOC: Brute Force Detection Project" />
           </figure>
           <h3>Cloudless SOC: Brute Force Detection Project</h3>
-          <p>A Python/Streamlit web app that ingests authentication logs, finds bursty failed-logon activity with a sliding window, and shows results in a clean dashboard.</p>
+          <p>
+            A Python/Streamlit web app that ingests authentication logs, finds bursty failed-logon activity with a sliding window,
+            and shows results in a clean dashboard.
+          </p>
           <p>
             <a class="btn" href="https://cloudless-soc-vscode-nb6bcqtwfypbzerkzjh7we.streamlit.app/" target="_blank" rel="noopener">Live Demo</a>
-            <a class="btn" href="https://github.com/AdonisYounes/cloudless-soc-brute-force-detection" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn" href="https://github.com/AdonisYounes/cloudless-soc-vscode" target="_blank" rel="noopener">GitHub</a>
           </p>
         </article>
       </div>
@@ -101,12 +127,19 @@
     <section id="experience" class="card">
       <h2>Experience & Education</h2>
       <ul class="experience-list">
-        <li><strong>In-Person Help Desk — College of Staten Island (Jan 2024 – May 2025)</strong><br>
-          Provided IT support to students via email, phone, and in person. Resolved 95% of printer issues on first contact.</li>
-        <li><strong>Cybersecurity & IT Intern — MSI Net Inc. (Jun 2024 – Aug 2024)</strong><br>
-          Configured 100+ student laptops and Bloomberg terminals with monitoring software. Deployed and secured workstations. Hands-on experience with PowerShell and Microsoft Azure.</li>
-        <li><strong>Garden Associate — Home Depot (Apr 2025 – Aug 2025)</strong><br>
-          Supported customers with plant care and tools. Maintained inventory and garden center operations.</li>
+        <li>
+          <strong>In-Person Help Desk — College of Staten Island (Jan 2024 – May 2025)</strong><br />
+          Provided IT support to students via email, phone, and in person. Resolved 95% of printer issues on first contact.
+        </li>
+        <li>
+          <strong>Cybersecurity & IT Intern — MSI Net Inc. (Jun 2024 – Aug 2024)</strong><br />
+          Configured 100+ student laptops and Bloomberg terminals with monitoring software. Deployed and secured workstations.
+          Hands-on experience with PowerShell and Microsoft Azure.
+        </li>
+        <li>
+          <strong>Garden Associate — Home Depot (Apr 2025 – Aug 2025)</strong><br />
+          Supported customers with plant care and tools. Maintained inventory and garden center operations.
+        </li>
       </ul>
     </section>
 
@@ -121,8 +154,9 @@
 
   <footer>
     <div class="container">
-      <p>© <span id="year"></span> Adonis Younes • 
-        <a href="https://github.com/AdonisYounes" target="_blank" rel="noopener">GitHub</a> • 
+      <p>
+        © <span id="year"></span> Adonis Younes •
+        <a href="https://github.com/AdonisYounes" target="_blank" rel="noopener">GitHub</a> •
         <a href="https://www.linkedin.com/in/adonis-younes-8475712a8/" target="_blank" rel="noopener">LinkedIn</a>
       </p>
     </div>

@@ -132,5 +132,100 @@ footer { padding: 2rem 0; color: var(--muted); text-align: center; }
 .experience-list li:hover { background: rgba(255,255,255,0.04); }
 [data-theme="light"] .experience-list li:hover { background:#f1f5f9; }
 
-/* remove old skill bars */
+
 .bar, .bar > span { display: none !important; }
+
+
+/* Dropdown Styling */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #1e293b;
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  list-style: none;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  z-index: 10;
+}
+
+.dropdown-menu li a {
+  color: #e5e7eb;
+  text-decoration: none;
+  display: block;
+  padding: 0.6rem 1rem;
+  transition: background 0.2s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #334155;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Align "More" with rest of nav */
+.navlinks {
+  display: flex;
+  gap: .9rem;
+  align-items: center;
+}
+
+/* Ensure dropdown clickable over sticky header */
+header.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* ensures header stays above content */
+}
+
+.navbar {
+  position: relative; /* anchor for dropdown stacking */
+  z-index: 1001;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #1e293b;
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  list-style: none;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  z-index: 2000; /* make sure dropdown is above everything */
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+/* Keep dropdown open while moving into it (mouse & keyboard) */
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+/* Stop the 'More' link from jumping up and creating a gap */
+.dropdown > .dropdown-toggle:hover,
+.dropdown > .dropdown-toggle:focus-visible {
+  transform: none;                 /* override the global nav hover lift */
+}
+
+/* Ensure the menu sits flush under the trigger (no gap) */
+.dropdown-menu {
+  top: 100%;
+  margin-top: 0;                   /* no extra spacing that causes hover loss */
+}
+
+/* (Optional) make the hit area a tad taller so it's forgiving */
+.dropdown { padding-bottom: 2px; } /* tiny buffer without creating a visual gap */
+
